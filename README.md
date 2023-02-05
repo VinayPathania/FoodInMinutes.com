@@ -1,3 +1,6 @@
+# Logo--
+![Food](https://user-images.githubusercontent.com/101379495/216818003-c960175d-8b1d-4b65-8637-06831ab79b69.png)
+
 # FoodInMinutes.com
 FoodInMinutes is basically a delivery application. This application has two users one is customer and the other is restaurant. I have created the APIs for both customer and restaurant section.
 ## Problem Statement:
