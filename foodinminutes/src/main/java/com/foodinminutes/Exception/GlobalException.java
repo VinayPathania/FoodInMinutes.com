@@ -87,7 +87,76 @@ public class GlobalException {
 		return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_REQUEST);
 	}
 
-	
+	@ExceptionHandler(BillException.class)
+	public ResponseEntity<MyErrorDetails> noHandlerExceptionHandler(BillException ee,WebRequest req){
+		
+		MyErrorDetails err = new MyErrorDetails();
+		
+		err.setTimeStamp(LocalDateTime.now());
+		err.setMessage(ee.getMessage());
+		err.setDetails(req.getDescription(false));
+		
+		return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_REQUEST);
+	}
+
+	 @ExceptionHandler(CustomerNotFoundException.class)
+	 public ResponseEntity<MyErrorDetails> noHandlerExceptionHandler(CustomerNotFoundException ee,WebRequest req){
+		
+		MyErrorDetails err = new MyErrorDetails();
+		
+		err.setTimeStamp(LocalDateTime.now());
+		err.setMessage(ee.getMessage());
+		err.setDetails(req.getDescription(false));
+		
+		return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_REQUEST);
+	}
+
+	@ExceptionHandler(FoodCartException.class)
+	public ResponseEntity<MyErrorDetails> noHandlerExceptionHandler(FoodCartException ee,WebRequest req){
+	   
+	   MyErrorDetails err = new MyErrorDetails();
+	   
+	   err.setTimeStamp(LocalDateTime.now());
+	   err.setMessage(ee.getMessage());
+	   err.setDetails(req.getDescription(false));
+	   
+	   return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_REQUEST);
+   }
+
+   @ExceptionHandler(ItemException.class)
+	public ResponseEntity<MyErrorDetails> noHandlerExceptionHandler(ItemException ee,WebRequest req){
+	   
+	   MyErrorDetails err = new MyErrorDetails();
+	   
+	   err.setTimeStamp(LocalDateTime.now());
+	   err.setMessage(ee.getMessage());
+	   err.setDetails(req.getDescription(false));
+	   
+	   return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_REQUEST);
+   }
+   @ExceptionHandler(OrderException.class)
+	public ResponseEntity<MyErrorDetails> noHandlerExceptionHandler(OrderException ee,WebRequest req){
+	   
+	   MyErrorDetails err = new MyErrorDetails();
+	   
+	   err.setTimeStamp(LocalDateTime.now());
+	   err.setMessage(ee.getMessage());
+	   err.setDetails(req.getDescription(false));
+	   
+	   return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_REQUEST);
+   }
+
+   @ExceptionHandler(RestaurantException.class)
+   public ResponseEntity<MyErrorDetails> noHandlerExceptionHandler(RestaurantException ee,WebRequest req){
+	  
+	  MyErrorDetails err = new MyErrorDetails();
+	  
+	  err.setTimeStamp(LocalDateTime.now());
+	  err.setMessage(ee.getMessage());
+	  err.setDetails(req.getDescription(false));
+	  
+	  return new ResponseEntity<MyErrorDetails>(err,HttpStatus.BAD_REQUEST);
+  }
 
 
     
